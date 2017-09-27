@@ -1,0 +1,15 @@
+{
+  "name": "numberbaseconvert",
+  "version": "1.0.0",
+  "description": "Convert Number bases binary, decimal, hexadecimal and octal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "keywords": [
+    "start"
+  ],
+  "author": "Blessed T Mahuni",
+  "license": "ISC"
+}
