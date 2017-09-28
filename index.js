@@ -144,4 +144,10 @@ function hexadecimalToDecimal(num){
             }
     return decimal;
 }
-console.log(hexadecimalToDecimal('B2342'));
+function hexadecimalToBinary(num){
+    var decimalEquivalent = hexadecimalToDecimal(num);
+    return decimalToBinary(decimalEquivalent);
+}
+
+
+console.log(hexadecimalToBinary('123'));
