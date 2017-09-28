@@ -87,8 +87,61 @@ function binaryToHexadecimal(num){
     return decimalToHexadecimal(decimal);
 }
 function hexadecimalToDecimal(num){
-    var hexaArr = num.split('');
-    var letters = [];
-    return hexaArr;
+    var hexaArr = [];
+    var deciArr = [];
+    var decimal;
+    num = num.split('');
+    var hexSize;
+    var temp;
+    for(var i = 0;i<num.length;i++)
+        {
+            switch(num[i])
+            {
+                case 'A':
+                    num[i] = 10;
+                    break;
+                case 'B':
+                    num[i] = 11;
+                    break;
+                case 'C':
+                    num[i] = 12;
+                    break;
+                case 'D':
+                    num[i] = 13;
+                    break;
+                case 'E':
+                    num[i] = 14;
+                    break;
+                case 'F':
+                    num[i] = 15;
+                    break;
+            }
+        }
+        for(var j=0;j<num.length;j++)
+            {
+                num[j] = Number(num[j])
+            }
+        hexSize = num.length - 1;
+        
+        while(hexSize>=0)
+            {
+                temp = Math.pow(16,hexSize);
+                hexaArr.push(temp);
+                hexSize--;
+            }
+            temp = 0;
+        for(var k = 0;k<hexaArr.length;k++)
+            {
+                temp = num[k]*hexaArr[k];
+                deciArr.push(temp);
+            }
+            decimal = 0;
+            temp = 0;
+        for(var l = 0;l<deciArr.length;l++)
+            {
+                temp=Number(deciArr[l]);
+                decimal = decimal + temp;
+            }
+    return decimal;
 }
 console.log(hexadecimalToDecimal('B2342'));
