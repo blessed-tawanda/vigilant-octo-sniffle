@@ -268,7 +268,7 @@ var app = new Vue({
                 }
                 else if(this.from=="Octal"&&this.To=="Hexadecimal")
                 {
-                    this.answer = octalToHexadecimal("")
+                    this.answer = octalToHexadecimal(this.number)
                 }
         }
     }
