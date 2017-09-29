@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <script src="js/vue.js"></script>
+    <script src="https://unpkg.com/vue"></script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Convertor</title>
+    
+    <!-- Local bootstrap CSS & JS -->
+    <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="css/style.css">
+    
+</head>
+<body>
+    <div class="container jumbotron">
+        <h1>The NumberBase Convertor</h1>
+    </div>
+
+    <div class="container">
+            <center id="app">
+                    <span>Convert From: </span>
+                    <select class="custom-select" v-model="from">
+                            <option disabled value="">Select Number System</option>
+                            <option>Binary</option>
+                            <option>Decimal</option>
+                            <option>Hexadecimal</option>
+                            <option>Octal</option>
+                    </select>
+                    <span>To: </span>
+                    <select class="custom-select" v-model="To">
+                            <option disabled value="">Select Number System</option>
+                            <option>Binary</option>
+                            <option>Decimal</option>
+                            <option>Hexadecimal</option>
+                            <option>Octal</option>
+                    </select>
+                <div class="inputbyuser input-group">
+                    <input type="text" class="form-control textbox" v-model="number"/>
+                    <button class="btn btn-secondary button" v-on:click="convert" type="button">Convert</button>
+                </div>
+
+                <div class="answer" >
+                        <p>{{answer}}</p>
+                </div>
+
+            </center>
+
+    </div>
+    
+</body>
+
+<script src="js/vue.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</html>

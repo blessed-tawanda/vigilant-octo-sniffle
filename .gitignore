@@ -1,0 +1,5 @@
+node_modules
+static/css/bootstrap.min.css
+static/js/jquery.js
+static/js/vue.js
+static/js/bootstrap.min.js

@@ -2,14 +2,22 @@
   "name": "numberbaseconvert",
   "version": "1.0.0",
   "description": "Convert Number bases binary, decimal, hexadecimal and octal",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node index.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [
     "start"
   ],
   "author": "Blessed T Mahuni",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.0",
+    "popper.js": "^1.12.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
 }

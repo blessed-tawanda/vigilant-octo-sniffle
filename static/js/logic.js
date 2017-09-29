@@ -2,7 +2,7 @@ function decimalToBinary(num){
     var remainders = [];
     var remainder;
     var qotient;
-    qotient = num;
+    qotient = Number(num);
     while(qotient>0)
     {
         remainder = qotient%2;
@@ -214,4 +214,65 @@ function octalToHexadecimal(num){
     return decimalToHexadecimal(decimalEquivalent);
 }
 
-console.log(octalToHexadecimal('63'));
+var app = new Vue({
+    el: '#app',
+    data: {
+      number: '',
+      from:'',
+      To:'',
+      answer:'',
+    },
+    methods: {
+        convert(){
+            if(this.from=="Binary"&&this.To=="Decimal"){
+                this.answer = binaryToDecimal(this.number);
+            }
+            else if(this.from=="Decimal"&&this.To=="Binary"){
+                this.answer = decimalToBinary(this.number);
+            }
+            else if(this.from=="Binary"&&this.To=="Hexadecimal")
+            {
+                this.answer = binaryToHexadecimal(this.number);
+            }
+            else if(this.from=="Hexadecimal"&&this.To=="Binary")
+            {
+                this.answer = hexadecimalToBinary(this.number);
+            }
+            else if(this.from=="Binary"&&this.To=="Octal")
+            {
+                this.answer = binaryToOctal(this.number);
+            }
+            else if(this.from=="Octal"&&this.To=="Binary")
+            {
+               this.answer = octalToBinary(this.number);
+            }
+            else if(this.from=="Decimal"&&this.To=="Hexadecimal" )
+            {
+                this.answer = decimalToHexadecimal(this.number);
+            }
+            else if(this.from=="Hexadecimal"&&this.To=="Decimal")
+                {
+                    this.answer = hexadecimalToDecimal(this.number);
+                }
+            else if(this.from=="Decimal"&&this.To=="Octal")
+                {
+                    this.answer = decimalToOctal(this.number);
+                }
+            else if(this.from=="Octal"&&this.To=="Decimal")
+                {
+                    this.answer = octalToDecimal(this.number);
+                }
+            else if(this.from=="Hexadecimal"&&this.To=="Octal")
+                {
+                    this.answer = hexadecimalToOctal(this.number);
+                }
+                else if(this.from=="Octal"&&this.To=="Hexadecimal")
+                {
+                    this.answer = octalToHexadecimal("")
+                }
+        }
+    }
+  })
+
+  
+
