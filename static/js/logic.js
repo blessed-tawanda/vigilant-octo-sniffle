@@ -278,7 +278,7 @@ var app = new Vue({
                 {
                     this.answer = this.number;
                 }
-            else if(tis.from=="Hexadecimal"&&this.To=="Hexadecimal")
+            else if(this.from=="Hexadecimal"&&this.To=="Hexadecimal")
                 {
                     this.answer = this.number;
                 }
