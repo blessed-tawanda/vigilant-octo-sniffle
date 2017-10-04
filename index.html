@@ -37,7 +37,7 @@
                             <option>Octal</option>
                     </select>
                 <div class="inputbyuser input-group">
-                    <input type="text" class="form-control textbox" v-model="number"/>
+                    <input type="text" class="form-control textbox" v-on:keyup.enter="convert" v-model="number"/>
                     <button class="btn btn-secondary button" v-on:click="convert" type="button">Convert</button>
                 </div>
 

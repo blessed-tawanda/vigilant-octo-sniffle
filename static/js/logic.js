@@ -1,5 +1,5 @@
 function decimalToBinary(num){
-    var remainders = [];
+    var remainders = []; //an array of remainders 
     var remainder;
     var qotient;
     qotient = Number(num);
@@ -251,9 +251,9 @@ var app = new Vue({
                 this.answer = decimalToHexadecimal(this.number);
             }
             else if(this.from=="Hexadecimal"&&this.To=="Decimal")
-                {
-                    this.answer = hexadecimalToDecimal(this.number);
-                }
+            {
+                this.answer = hexadecimalToDecimal(this.number);
+            }
             else if(this.from=="Decimal"&&this.To=="Octal")
                 {
                     this.answer = decimalToOctal(this.number);
@@ -266,9 +266,25 @@ var app = new Vue({
                 {
                     this.answer = hexadecimalToOctal(this.number);
                 }
-                else if(this.from=="Octal"&&this.To=="Hexadecimal")
+            else if(this.from=="Octal"&&this.To=="Hexadecimal")
                 {
-                    this.answer = octalToHexadecimal(this.number)
+                    this.answer = octalToHexadecimal(this.number);
+                }
+            else if(this.from=="Binary"&&this.To=="Binary")
+                {
+                    this.answer = this.number;
+                }
+            else if(this.from=="Decimal"&&this.To=="Decimal")
+                {
+                    this.answer = this.number;
+                }
+            else if(tis.from=="Hexadecimal"&&this.To=="Hexadecimal")
+                {
+                    this.answer = this.number;
+                }
+            else if(this.from=="Octal"&&this.To=="Octal")
+                {
+                        this.answer = this.number;
                 }
         }
     }
